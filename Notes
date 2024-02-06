@@ -1,0 +1,71 @@
+################################################# CREATE & BUILD PACKAGES
+
+# path = file.path(tempdir(), "bcarr")
+# usethis::create_package(path)
+
+# build the package with Ctrl + Shift + B
+
+# Putting your package on GitHub allows you (and others) to install your package remotely using-
+# remotes::install_github() without requiring a local copy of the source code
+
+# install.packages("devtools")
+# install.packages("roxygen2")
+
+# C:/Program Files/R/R-4.3.2/library
+
+library(devtools)
+load_all(".")
+
+library(bcarr)
+readWriteClip_addQuoteComma()
+
+library(roxygen2); # Read in the roxygen2 R package
+roxygenise();      # Builds the help files
+
+
+
+################################################# bcarr::readWriteClip_addQuoteComma()
+
+############## FIRST TIME USE
+
+# STEP 0
+  # only need to run this once, it will install the package to your local R library
+  # so next time you open R and use this function you can skip this step
+    remotes::install_github("bjcarr08/bcarr") 
+# STEP 1
+  # copy data to clipboard
+# STEP 3
+    bcarr::readWriteClip_addQuoteComma(lineBreak = T)
+# STEP 4 
+  # new data is saved to clipboard, paste wherever
+
+############## EXAMPLES
+
+##### OPTION 1
+
+# copy example data
+    lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3
+    lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3
+    lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3
+# run R code
+    bcarr::readWriteClip_addQuoteComma()
+# paste to notepad (or wherever)
+    "lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3",
+    "lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3",
+    "lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3"
+
+##### OPTION 2
+
+# copy example data
+    lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3
+    lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3
+    lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3
+# run R code
+    bcarr::readWriteClip_addQuoteComma(lineBreak=F)
+# paste to notepad (or wherever)
+    "lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3","lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3","lucid/robGrahamEnterprises/20231221-120408_5023216560-all.mp3"
+
+
+
+
+#########   E N D   #########
