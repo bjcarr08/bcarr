@@ -7,9 +7,13 @@
 #'
 #' @param comment.char A character vector of length one containing a single character or an empty string. Use "" to turn off the interpretation of comments altogether.
 #' @export
-readWriteClip_addQuoteComma <- function(lineBreak = T, comment.char = "|"){
+readWriteClip_addQuoteComma <- function(lineBreak = T, comment.char = "|", singleQuotes = T){
   x <- clipr::read_clip_tbl(header = F, stringsAsFactors = T, comment.char = comment.char)
-  x$new <- paste0('"', x$V1, '"')
+  if(singleQuotes == T){
+    x$new <- paste0("'", x$V1, "'")
+  } else {
+    x$new <- paste0('"', x$V1, '"')
+  }
   if(lineBreak == T){
     clipr::write_clip(x$new, breaks = ",\n")
   } else {
