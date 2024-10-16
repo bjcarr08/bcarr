@@ -48,3 +48,4 @@ readWriteClip_addQuoteComma <- function(lineBreak = T, commentChar = "|", single
 #       }
 #   }
 # }
+
