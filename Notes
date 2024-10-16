@@ -24,6 +24,19 @@ roxygenise();      # Builds the help files
 
 
 
+
+
+
+################################################# TROUBLESHOOTING
+
+https://kbroman.org/pkg_primer/pages/github.html
+
+https://stackoverflow.com/questions/4181861/message-src-refspec-master-does-not-match-any-when-pushing-commits-in-git
+
+
+
+
+
 ################################################# bcarr::readWriteClip_addQuoteComma()
 
 ############## FIRST TIME USE
@@ -31,12 +44,12 @@ roxygenise();      # Builds the help files
 # STEP 0
   # only need to run this once, it will install the package to your local R library
   # so next time you open R and use this function you can skip this step
-    remotes::install_github("bjcarr08/bcarr") 
+    remotes::install_github("bjcarr08/bcarr")
 # STEP 1
   # copy data to clipboard
 # STEP 3
     bcarr::readWriteClip_addQuoteComma(lineBreak = T)
-# STEP 4 
+# STEP 4
   # new data is saved to clipboard, paste wherever
 
 ############## EXAMPLES
