@@ -1,0 +1,18 @@
+### OLD (updated on 10-16-2024)
+# readWriteClip_addQuoteComma <- function(lineBreak = T, commentChar = "|", singleQuotes = T, callMiner = F){
+#   x <- clipr::read_clip_tbl(header = F, stringsAsFactors = T, comment.char = commentChar)
+#   if(calMiner == T){
+#     x$new <- paste0(x$V1, ";")
+#   } else {
+#       if(singleQuotes == T){
+#         x$new <- paste0("'", x$V1, "'")
+#       } else {
+#         x$new <- paste0('"', x$V1, '"')
+#       }
+#       if(lineBreak == T){
+#         clipr::write_clip(x$new, breaks = ",\n")
+#       } else {
+#         clipr::write_clip(x$new, breaks = ",")
+#       }
+#   }
+# }
